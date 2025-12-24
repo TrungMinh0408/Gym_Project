@@ -5,7 +5,7 @@ Dự án quản lý phòng gym gồm 3 phần:
 - Mobile App (khách hàng)
 - REST API (xử lý nghiệp vụ và kết nối cơ sở dữ liệu)
 
-Mục tiêu của hệ thống là hỗ trợ quản lý hội viên, gói tập, huấn luyện viên, hóa đơn và lịch tập.
+Mục tiêu của hệ thống là hỗ trợ quản lý hội viên, gói tập, huấn luyện viên, hóa đơn và lịch tập , có camera quét pose so sánh tư thế và dùng giọng nói nhắc nhở user điều chỉnh tư thế .
 
 Cấu hình set up: 
 -tải SSMS (dùng SQL Server Management Studio 20) rồi chạy file Gym.sql để tạo csdl.
