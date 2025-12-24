@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gym.PTFeedbackPage"
+             Title="PTFeedbackPage">
+    <Grid>
+
+        <!-- Toàn bộ nội dung trang -->
+        <ScrollView>
+            <VerticalStackLayout Padding="20">
+
+                <!-- PT INFO -->
+                <Frame BackgroundColor="#eeeeee" Padding="20" CornerRadius="12">
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="{Binding PTName}" FontSize="22" FontAttributes="Bold" />
+                        <Label Text="{Binding Specialty}" FontSize="16"/>
+                        <Label Text="Kinh nghiệm:" FontSize="14"/>
+                        <Label Text="{Binding ExperienceYears , StringFormat='{}{0} năm'}" FontSize="14"/>
+                        <Label Text="{Binding Email}" FontSize="14" TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- FEEDBACK LIST -->
+                <CollectionView ItemsSource="{Binding Feedbacks}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Margin="0,10" Padding="10" BorderColor="#ddd" CornerRadius="10">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding UserName}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Comment}" FontSize="14"/>
+                                    <Label Text="{Binding RatingStars}" FontSize="14" TextColor="Orange"/>
+                                    <Label Text="{Binding CreatedAt, StringFormat='{0:dd/MM/yyyy}'}"
+                                           FontSize="12" TextColor="Gray"/>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- FLOATING ACTION BUTTON -->
+        <Frame
+            HeightRequest="60"
+            WidthRequest="60"
+            CornerRadius="30"
+            BackgroundColor="#0066ff"
+            VerticalOptions="End"
+            HorizontalOptions="End"
+            Margin="20"
+            HasShadow="True">
+
+            <Image Source="writeicon.png"
+                   HeightRequest="30"
+                   WidthRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAddFeedbackClicked"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </Frame>
+
+    </Grid>
+</ContentPage>

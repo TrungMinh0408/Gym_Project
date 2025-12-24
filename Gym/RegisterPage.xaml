@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    x:Class="Gym.RegisterPage"
+    Title="Register"
+    BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <!-- Header -->
+            <Label Text="Create Account"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333"/>
+
+            <!-- Input Fields Frame -->
+            <Frame CornerRadius="15" BackgroundColor="White" HasShadow="True" Padding="15">
+                <VerticalStackLayout Spacing="15">
+
+                    <!-- Name -->
+                    <Entry x:Name="NameEntry" Placeholder="Full Name" Keyboard="Text"/>
+
+                    <!-- Email -->
+                    <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email"/>
+
+                    <!-- Password -->
+                    <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True"/>
+                    <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True"/>
+
+                    <!-- Gender -->
+                    <Label Text="Gender" FontAttributes="Bold"/>
+                    <HorizontalStackLayout Spacing="20">
+                        <RadioButton x:Name="MaleRadio" Content="Male" GroupName="Gender"/>
+                        <RadioButton x:Name="FemaleRadio" Content="Female" GroupName="Gender"/>
+                        <RadioButton x:Name="OtherRadio" Content="Other" GroupName="Gender"/>
+                    </HorizontalStackLayout>
+
+                    <!-- Birthday / Age -->
+                    <Label Text="Date of Birth" FontAttributes="Bold"/>
+                    <DatePicker x:Name="BirthdayPicker"
+                                 MaximumDate="{x:Static sys:DateTime.Today}"
+                                   Format="dd/MM/yyyy"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Error Message -->
+            <Label x:Name="ErrorLabel"
+                   TextColor="Crimson"
+                   IsVisible="False"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <!-- Register Button -->
+            <Grid>
+                <Button x:Name="RegisterButton"
+                        Text="Register"
+                        BackgroundColor="#4CAF50"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HeightRequest="50"
+                        FontAttributes="Bold"
+                        Clicked="OnRegisterClicked"/>
+                <ActivityIndicator x:Name="BusyIndicator"
+                                   IsVisible="False"
+                                   IsRunning="False"
+                                   Color="#4CAF50"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"/>
+            </Grid>
+
+            <!-- Login Link -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Already have an account?" TextColor="#555"/>
+                <Button Text="Login" BackgroundColor="Transparent" TextColor="#4CAF50" Clicked="OnLoginClicked"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gym.ContactPage"
+             Title="Contact Us"
+             BackgroundColor="#F5F5F5"
+             Padding="20">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+
+            <!-- Header -->
+            <Label Text="Contact Us"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#512DA8"/>
+
+            <!-- Description -->
+            <Label Text="We’d love to hear from you! Reach out to us via any of the following methods:"
+                   FontSize="16"
+                   TextColor="Gray"
+                   HorizontalOptions="Center"/>
+
+            <!-- Email -->
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <Label Text="📧 Email:" FontAttributes="Bold"/>
+                <Label Text="support@gymapp.com" TextColor="#1E90FF"/>
+            </HorizontalStackLayout>
+
+            <!-- Phone -->
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <Label Text="📞 Phone:" FontAttributes="Bold"/>
+                <Label Text="+84 123 456 789" TextColor="#1E90FF"/>
+            </HorizontalStackLayout>
+
+            <!-- Address -->
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <Label Text="🏢 Address:" FontAttributes="Bold"/>
+                <Label Text="123 Gym Street, Hanoi, Vietnam" TextColor="Gray"/>
+            </HorizontalStackLayout>
+
+            <!-- Optional: Contact Form -->
+            <Label Text="Send us a message:" FontAttributes="Bold" FontSize="18"/>
+            <Entry Placeholder="Your name"/>
+            <Entry Placeholder="Your email"/>
+            <Editor Placeholder="Your message" AutoSize="TextChanges" HeightRequest="120"/>
+            <Button Text="Send Message" BackgroundColor="#512DA8" TextColor="White" CornerRadius="10"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gym.PaymentConfirmationPage"
+             Title="Xác nhận thanh toán"
+             BackgroundColor="#F5F5F5"
+             Padding="20">
+
+    <VerticalStackLayout Spacing="20">
+        <Label Text="Xác nhận thanh toán" 
+               FontSize="26" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#512DA8"/>
+
+        <Frame CornerRadius="15"
+               BackgroundColor="White"
+               Padding="15"
+               HasShadow="True">
+            <VerticalStackLayout Spacing="10">
+
+                <Label Text="Tên gói tập:" FontAttributes="Bold"/>
+                <Label x:Name="PlanNameLabel" Text="..." FontSize="16"/>
+
+                <Label Text="Thời hạn:" FontAttributes="Bold"/>
+                <Label x:Name="DurationLabel" Text="..." FontSize="16"/>
+
+                <Label Text="Giá:" FontAttributes="Bold"/>
+                <Label x:Name="PriceLabel" Text="..." FontSize="16" TextColor="#2E7D32"/>
+
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Xác nhận thanh toán"
+                BackgroundColor="#512DA8"
+                TextColor="White"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                Clicked="OnConfirmPaymentClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

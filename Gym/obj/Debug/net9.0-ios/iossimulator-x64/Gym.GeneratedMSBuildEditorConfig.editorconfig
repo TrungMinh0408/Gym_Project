@@ -1,0 +1,211 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Gym
+build_property.ProjectDir = C:\Users\ADMIN\source\repos\Gym\Gym\Gym\Gym\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/AboutUsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.AboutUsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AboutUsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AboutUsPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/AccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.AccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AccountPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/AddProgressPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.AddProgressPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddProgressPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddProgressPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/ChallengePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.ChallengePage.xaml
+build_metadata.AdditionalFiles.TargetPath = ChallengePage.xaml
+build_metadata.AdditionalFiles.RelativePath = ChallengePage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/CheckinPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.CheckinPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CheckinPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CheckinPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/ClassesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.ClassesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ClassesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ClassesPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/ContactPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.ContactPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ContactPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ContactPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/ExercisesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.ExercisesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ExercisesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ExercisesPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = HomePage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/LeaderboardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.LeaderboardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LeaderboardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LeaderboardPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/MainPage_Onnx.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.MainPage_Onnx.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage_Onnx.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage_Onnx.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/MembershipPlansPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.MembershipPlansPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MembershipPlansPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MembershipPlansPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/PaymentConfirmationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.PaymentConfirmationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PaymentConfirmationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PaymentConfirmationPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/PostCreatePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.PostCreatePage.xaml
+build_metadata.AdditionalFiles.TargetPath = PostCreatePage.xaml
+build_metadata.AdditionalFiles.RelativePath = PostCreatePage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/PostEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.PostEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PostEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PostEditPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/PostListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.PostListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PostListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PostListPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/ProgressEntryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.ProgressEntryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ProgressEntryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ProgressEntryPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/ProgressPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.ProgressPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ProgressPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ProgressPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/PTFeedbackPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.PTFeedbackPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PTFeedbackPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PTFeedbackPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/PTListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.PTListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = PTListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = PTListPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/SchedulePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.SchedulePage.xaml
+build_metadata.AdditionalFiles.TargetPath = SchedulePage.xaml
+build_metadata.AdditionalFiles.RelativePath = SchedulePage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/TrainerProgressPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.TrainerProgressPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TrainerProgressPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TrainerProgressPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/UserClassesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.UserClassesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UserClassesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UserClassesPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/UserPlansPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.UserPlansPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UserPlansPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UserPlansPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/UserProgressPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.UserProgressPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UserProgressPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UserProgressPage.xaml
+
+[C:/Users/ADMIN/source/repos/Gym/Gym/Gym/Gym/WriteFeedbackPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Gym.WriteFeedbackPage.xaml
+build_metadata.AdditionalFiles.TargetPath = WriteFeedbackPage.xaml
+build_metadata.AdditionalFiles.RelativePath = WriteFeedbackPage.xaml
