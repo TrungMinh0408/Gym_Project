@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="Gym.ClassesPage"  
+             Title="Classes"  
+             BackgroundColor="#F5F5F5"  
+             Padding="20">
+
+ 
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15">
+
+            <!-- Header -->
+            <Label Text="Available Classes"  
+                   FontSize="28"  
+                   FontAttributes="Bold"  
+                   HorizontalOptions="Center"  
+                   TextColor="#512DA8"/>
+
+            <!-- Search + Sort -->
+            <HorizontalStackLayout Spacing="10">
+                <SearchBar x:Name="SearchBar"  
+                           Placeholder="Search class name..."  
+                           TextChanged="OnSearchTextChanged"  
+                           BackgroundColor="White"  
+                           HeightRequest="40"/>
+
+                <Picker x:Name="SortPicker"  
+                        Title="Sort by"  
+                        SelectedIndexChanged="OnSortChanged"  
+                        WidthRequest="150"
+                        BackgroundColor="White"  
+                        HeightRequest="40"/>
+            </HorizontalStackLayout>
+
+            <!-- Collection of classes -->
+            <CollectionView x:Name="ClassesList"  
+                            Margin="0,10,0,0"  
+                            ItemsLayout="VerticalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="20"
+                               Padding="15"
+                               Margin="5"
+                               BackgroundColor="White"
+                               BorderColor="#E0E0E0"
+                               HasShadow="True"
+                               Shadow="2,2,5,0.3">
+
+                            <VerticalStackLayout Spacing="12">
+
+                                <!-- Tên lớp + Status Badge -->
+                                <!-- Tên lớp + Status Badge -->
+                                <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                                    <Label Text="{Binding ClassName}"  
+           FontSize="20"  
+           FontAttributes="Bold"  
+           TextColor="#512DA8"  
+           VerticalOptions="Center"  
+           Grid.Column="0"/>
+
+                                    <!-- Status Badge -->
+                                    <Frame Padding="5,2" 
+           CornerRadius="12"
+           HasShadow="False"
+           BackgroundColor="{Binding StatusColor}"
+           HorizontalOptions="End"
+           VerticalOptions="Center"
+           Grid.Column="1">
+                                        <Label Text="{Binding StatusText}" 
+               FontAttributes="Bold"
+               TextColor="White"
+               FontSize="12"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+                                    </Frame>
+                                </Grid>
+
+
+                                <!-- Max Participants -->
+                                <HorizontalStackLayout Spacing="10">
+                                    <Label Text="Max:" FontAttributes="Bold"/>
+                                    <Label Text="{Binding MaxParticipants}" TextColor="#2E7D32"/>
+                                </HorizontalStackLayout>
+
+                                <!-- PT info -->
+                                <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                                    <Label Text="PT:" FontAttributes="Bold"/>
+                                    <Label Text="{Binding PTName}"  
+                                           TextColor="#1E90FF"    
+                                           TextDecorations="Underline"  
+                                           VerticalTextAlignment="Center"  
+                                           HorizontalTextAlignment="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnViewPTClicked"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </HorizontalStackLayout>
+
+                                <!-- Room info -->
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="Room:" FontAttributes="Bold"/>
+                                    <Label Text="{Binding RoomName}" TextColor="Gray"/>
+                                </HorizontalStackLayout>
+
+                                <!-- Đăng ký Button -->
+                                <Button Text="Đăng ký lớp"
+                                        FontAttributes="Bold"
+                                        FontSize="16"
+                                        TextColor="White"
+                                        BackgroundColor="#512DA8"
+                                        CornerRadius="12"
+                                        HeightRequest="45"
+                                        Shadow="1,1,3,0.3"
+                                        Clicked="OnRegisterClassClicked"
+                                        CommandParameter="{Binding Id}">
+                                    <Button.Triggers>
+                                        <!-- Khi nhấn sẽ tối màu button -->
+                                        <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                            <Setter Property="BackgroundColor" Value="#3D1B99"/>
+                                        </Trigger>
+                                    </Button.Triggers>
+                                </Button>
+
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

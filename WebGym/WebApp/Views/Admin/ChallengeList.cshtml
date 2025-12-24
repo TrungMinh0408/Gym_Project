@@ -1,0 +1,52 @@
+﻿@model List<Challenges>
+
+@{
+    ViewData["Title"] = "Quản lý thử thách";
+}
+
+<h2 class="mb-4">🏆 Quản lý thử thách</h2>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Tiêu đề</th>
+            <th>Điểm thưởng</th>
+            <th>Thời gian</th>
+            <th width="220">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>
+                    <strong>@c.Title</strong><br />
+                    <small class="text-muted">@c.Description</small>
+                </td>
+                <td class="text-center">
+                    <span class="badge bg-success">
+                        @c.RewardPoints pts
+                    </span>
+                </td>
+                <td>
+                    @c.StartDate?.ToString("dd/MM/yyyy")
+                    →
+                    @c.EndDate?.ToString("dd/MM/yyyy")
+                </td>
+                <td class="text-center">
+                    <a asp-action="EditChallenge"
+                       asp-route-id="@c.Id"
+                       class="btn btn-sm btn-warning">
+                        ✏️ Sửa
+                    </a>
+
+                    <a asp-action="Participants"
+                       asp-route-challengeId="@c.Id"
+                       class="btn btn-sm btn-primary ms-1">
+                        👥 Người tham gia
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

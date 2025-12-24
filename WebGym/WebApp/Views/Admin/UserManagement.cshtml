@@ -1,0 +1,32 @@
+﻿@model WebApp.Models.UserFilterResult
+
+<h2 class="mb-3">👥 Danh sách người dùng</h2>
+
+@if (Model.Users == null || !Model.Users.Any())
+{
+    <div class="alert alert-warning">Không có dữ liệu.</div>
+}
+else
+{
+    <table class="table table-bordered text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var u in Model.Users)
+            {
+                <tr>
+                    <td>@u.Id</td>
+                    <td>@u.Name</td>
+                    <td>@u.Email</td>
+                    <td>@u.Role</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,48 @@
+﻿@model Challenges
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thử thách";
+}
+
+<h2 class="mb-4">✏️ Chỉnh sửa thử thách</h2>
+
+<form asp-action="EditChallenge" method="post" class="card p-4 shadow-sm">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label class="form-label">Tiêu đề</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mô tả</label>
+        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Điểm thưởng</label>
+        <input asp-for="RewardPoints" class="form-control" />
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">
+            <label class="form-label">Ngày bắt đầu</label>
+            <input asp-for="StartDate" type="date" class="form-control" />
+        </div>
+        <div class="col">
+            <label class="form-label">Ngày kết thúc</label>
+            <input asp-for="EndDate" type="date" class="form-control" />
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary">
+            💾 Lưu thay đổi
+        </button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">
+            ⬅ Quay lại
+        </a>
+    </div>
+</form>

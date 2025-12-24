@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="wrapper d-flex">
+        <!-- SIDEBAR -->
+        @{
+            var userId = Context.Session.GetString("UserId");
+        }
+
+        @if (userId != null)
+        {
+            <nav id="sidebar" class="bg-dark text-white p-3" style="width: 250px; min-height: 100vh;">
+
+                <h4 class="text-center mb-4">Admin Panel</h4>
+
+                <ul class="nav flex-column">
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/Statistics">Thống kê người dùng</a>
+                    </li>
+
+                    <!-- PT -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/PTStatistics">Huấn luyện viên (PT)</a>
+                    </li>
+
+                    <!-- MANAGE CLASS -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/ClassList">Quản lý lớp học</a>
+                    </li>
+
+                    <!-- MANAGE SCHEDULES -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/ScheduleCalendar">Quản lý lịch tập</a>
+                    </li>
+
+                    <!-- EQUIPMENT -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/Equipment">Thiết bị</a>
+                    </li>
+
+                    <!-- ROOM -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/RoomStatistics">Phòng tập</a>
+                    </li>
+
+                    <!-- MEMBERSHIP PLANS -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/MembershipPlans">Quản lý gói Membership</a>
+                    </li>
+
+                              <!-- REVENUE -->
+                    <li class="nav-item mb-2">
+                        <a href="/Admin/TrackRevenue" class="nav-link text-white">Theo dõi doanh thu</a>
+                    </li>
+
+
+                    <!-- TRANSACTIONS -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/Transactions">Giao dịch</a>
+                    </li>
+               
+
+                    <!-- REGISTER USER -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/Create">Đăng ký User</a>
+                    </li>
+                    <!-- USER PROGRESS -->
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/UserProgress">Tiến trình người dùng</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link text-white" href="/Admin/ChallengeList">Thử thách</a>
+                    </li>
+
+                    <!-- LOGOUT -->
+                    <li class="nav-item mt-3">
+                        <a class="btn btn-danger w-100" href="/Login/Logout">Đăng xuất</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        }
+
+        <!-- MAIN CONTENT -->
+        <div id="content" class="flex-grow-1 p-4">
+            @RenderBody()
+        </div>
+
+    </div>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

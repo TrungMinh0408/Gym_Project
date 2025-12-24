@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApp.Models.Schedule>
+
+@{
+    ViewData["Title"] = "Quản lý lịch tập";
+}
+
+<h2 class="text-center mb-4">Quản lý lịch học</h2>
+
+<p class="text-center">
+    <!-- PHẢI LÀ CreateSchedule -->
+    <a asp-controller="Admin"
+       asp-action="CreateSchedule"
+       class="btn btn-primary">
+        + Thêm lịch
+    </a>
+</p>
+
+<table class="table table-bordered table-striped mt-3 mx-auto" style="width: 70%;">
+    <thead>
+            <th class="text-center">Id</th>
+            <th class="text-center">ClassId</th>
+            <th class="text-center">Giờ bắt đầu</th>
+            <th class="text-center">Giờ kết thúc</th>
+            <th class="text-center">Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-center">@item.Id</td>
+                <td class="text-center">@item.ClassId</td>
+                <td class="text-center">@item.StartTime.ToString("dd/MM/yyyy HH:mm")</td>
+                <td class="text-center">@item.EndTime.ToString("dd/MM/yyyy HH:mm")</td>
+                <td class="text-center">
+                    <!-- PHẢI LÀ EditSchedule -->
+                    <a asp-controller="Admin"
+                       asp-action="EditSchedule"
+                       asp-route-id="@item.Id"
+                       class="btn btn-sm btn-warning">
+                        Sửa
+                    </a>
+
+                    <!-- PHẢI LÀ DeleteSchedule -->
+                    <a asp-controller="Admin"
+                       asp-action="DeleteSchedule"
+                       asp-route-id="@item.Id"
+                       class="btn btn-sm btn-danger">
+                        Xóa
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

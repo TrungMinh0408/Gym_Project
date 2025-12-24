@@ -1,0 +1,39 @@
+﻿@model List<ChallengeParticipantDto>
+
+<h2>Danh sách người tham gia</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Điểm hiện tại</th>
+            <th>Cập nhật</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.UserName</td>
+
+                <td>
+                    <form asp-action="UpdateProgress" method="post" class="d-flex gap-2">
+                        <input type="hidden" name="participantId" value="@p.ParticipantId" />
+
+                        <input type="number"
+                               name="points"
+                               value="@p.CurrentPoints"
+                               class="form-control"
+                               style="width:120px" />
+
+                        <button class="btn btn-primary btn-sm">
+                            💾 Lưu
+                        </button>
+                    </form>
+                </td>
+
+                <td>@p.JoinedAt.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

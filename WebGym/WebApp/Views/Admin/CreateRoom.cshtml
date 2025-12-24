@@ -1,0 +1,29 @@
+﻿@model WebApp.Models.RoomStatistics
+@{
+    ViewData["Title"] = "Thêm Phòng Tập";
+}
+
+<h2 class="text-center mb-4">➕ Thêm Phòng Tập Mới</h2>
+
+<form asp-action="CreateRoom" method="post" class="w-50 mx-auto">
+
+    <div class="mb-3">
+        <label asp-for="RoomName" class="form-label"></label>
+        <input asp-for="RoomName" class="form-control" required />
+        <span asp-validation-for="RoomName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Capacity" class="form-label"></label>
+        <input asp-for="Capacity" type="number" min="1" class="form-control" required />
+        <span asp-validation-for="Capacity" class="text-danger"></span>
+    </div>
+
+    <!-- Mặc định trạng thái -->
+    <input type="hidden" asp-for="Status" value="Available" />
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-success">Lưu</button>
+        <a asp-action="RoomStatistics" class="btn btn-secondary">Hủy</a>
+    </div>
+</form>

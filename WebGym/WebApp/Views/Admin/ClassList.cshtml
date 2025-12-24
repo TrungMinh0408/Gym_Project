@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebApp.Models.ClassViewModel>
+
+<h2 class="text-center">📋 Danh sách lớp học</h2>
+
+<a href="/Admin/CreateClass" class="btn btn-success mb-3">➕ Thêm lớp</a>
+
+<table class="table table-bordered text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tên lớp</th>
+            <th>Huấn luyện viên</th>
+            <th>Phòng</th>
+            <th>Sức chứa</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Id</td>
+                <td>@c.ClassName</td>
+                <td>@c.PTName</td>
+                <td>@c.RoomName</td>
+                <td>@c.MaxParticipants</td>
+                <td>
+                    <a href="/Admin/EditClass/@c.Id" class="btn btn-primary btn-sm">✏</a>
+                    <a href="/Admin/DeleteClass/@c.Id" class="btn btn-danger btn-sm"
+                       onclick="return confirm('Xóa lớp này?')">🗑</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

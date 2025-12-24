@@ -1,0 +1,46 @@
+﻿@model WebApp.Models.UserProgressHistoryViewModel
+
+@{
+    ViewData["Title"] = "Thêm tiến trình";
+}
+
+<h2>➕ Thêm / Cập nhật tiến trình</h2>
+
+<form asp-action="CreateUserProgress" method="post">
+
+    <input type="hidden" asp-for="UserId" />
+    <input type="hidden" asp-for="PTUserId" />
+
+    <div class="mb-3">
+        <label>Ngày theo dõi</label>
+        <input asp-for="CreatedAt" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Cân nặng (kg)</label>
+        <input asp-for="Weight" class="form-control" step="0.1" />
+    </div>
+
+    <div class="mb-3">
+        <label>% Mỡ</label>
+        <input asp-for="BodyFat" class="form-control" step="0.1" />
+    </div>
+
+    <div class="mb-3">
+        <label>Cơ bắp (kg)</label>
+        <input asp-for="MuscleMass" class="form-control" step="0.1" />
+    </div>
+
+    <div class="mb-3">
+        <label>Ghi chú</label>
+        <textarea asp-for="Note" class="form-control" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">💾 Lưu</button>
+    <a asp-action="UserProgress" asp-route-userId="@Model.UserId" class="btn btn-secondary">⬅ Quay lại</a>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

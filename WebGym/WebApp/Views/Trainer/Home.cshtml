@@ -1,0 +1,34 @@
+﻿@model List<WebApp.Models.ClassWithScheduleDTO>
+
+<h2 class="text-center mb-4">📅 Lịch dạy của Huấn luyện viên</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning text-center">
+        Bạn không có buổi dạy nào hôm nay.
+    </div>
+}
+else
+{
+    <table class="table table-bordered text-center shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Lớp học</th>
+                <th>Phòng</th>
+                <th>Bắt đầu</th>
+                <th>Kết thúc</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ClassName</td>
+                    <td>@item.RoomName</td>
+                    <td>@item.StartTime.ToString("HH:mm dd/MM")</td>
+                    <td>@item.EndTime.ToString("HH:mm dd/MM")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

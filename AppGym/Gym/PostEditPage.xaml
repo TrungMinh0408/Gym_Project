@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Class="Gym.Pages.PostEditPage"
+    Title="Edit Post">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="12" Spacing="15">
+
+            <!-- ==== TITLE & CONTENT ==== -->
+            <Entry x:Name="TitleEntry" Placeholder="Title" />
+            <Editor x:Name="ContentEditor" HeightRequest="160" Placeholder="Write your post..." />
+
+            <Label x:Name="ErrorLabel" TextColor="Crimson" IsVisible="False" />
+
+            <!-- ==== PICK NEW MEDIA ==== -->
+            <HorizontalStackLayout Spacing="10">
+                <Button Text="Pick Images" Clicked="OnPickImagesClicked" />
+                <Button Text="Pick Videos" Clicked="OnPickVideosClicked" />
+            </HorizontalStackLayout>
+
+            <!-- ==== OLD MEDIA ==== -->
+            <Label x:Name="OldMediaLabel" Text="Existing Media:" FontAttributes="Bold" IsVisible="False" />
+            <CollectionView x:Name="OldMediaPreview"
+                            ItemsLayout="HorizontalList"
+                            HeightRequest="120"
+                            IsVisible="False">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="4">
+                            <Frame Padding="0" HasShadow="False">
+                                <Image Source="{Binding Url}" Aspect="AspectFill" WidthRequest="120" HeightRequest="120"/>
+                            </Frame>
+                            <Button Text="✕"
+                                    FontSize="14"
+                                    BackgroundColor="#AA000000"
+                                    TextColor="White"
+                                    WidthRequest="24"
+                                    HeightRequest="24"
+                                    CornerRadius="12"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Start"
+                                    CommandParameter="{Binding Id}"
+                                    Clicked="OnDeleteOldMediaClicked"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- ==== NEW IMAGES ==== -->
+            <Label x:Name="NewImagesLabel" Text="New Images:" FontAttributes="Bold" IsVisible="False"/>
+            <CollectionView x:Name="ImagesPreview"
+                            ItemsLayout="HorizontalList"
+                            HeightRequest="120"
+                            IsVisible="False">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0" Margin="4">
+                            <Image Source="{Binding}" WidthRequest="120" HeightRequest="120" Aspect="AspectFill"/>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- ==== NEW VIDEOS ==== -->
+            <Label x:Name="NewVideosLabel" Text="New Videos:" FontAttributes="Bold" IsVisible="False"/>
+            <CollectionView x:Name="VideosPreview"
+                            ItemsLayout="HorizontalList"
+                            HeightRequest="120"
+                            IsVisible="False">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0" Margin="4" BackgroundColor="#EEE">
+                            <Label Text="{Binding}" FontSize="13" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- ==== SUBMIT BUTTON ==== -->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button x:Name="SubmitButton" Text="Save Changes" WidthRequest="140" Clicked="OnSaveClicked"/>
+                <ActivityIndicator x:Name="BusyIndicator" IsVisible="False" IsRunning="False"
+                                   VerticalOptions="Center" HorizontalOptions="Center"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

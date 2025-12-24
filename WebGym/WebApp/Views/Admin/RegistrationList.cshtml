@@ -1,0 +1,63 @@
+﻿@model List<WebApp.Models.RegistrationViewModel>
+
+<h2 class="mb-4">📄 Danh sách đăng ký gói tập</h2>
+
+<a class="btn btn-primary mb-3" href="/Admin/CreateRegistration">+ Đăng ký gói mới</a>
+
+<table class="table table-bordered table-striped text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Học viên</th>
+            <th>Gói tập</th>
+            <th>Bắt đầu</th>
+            <th>Kết thúc</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.UserName</td>
+                <td>@item.PlanName</td>
+                <td>@item.StartDate.ToString("dd/MM/yyyy")</td>
+                <td>@item.EndDate.ToString("dd/MM/yyyy")</td>
+
+                <td>
+                    @if (item.Status == "Expired")
+                    {
+                        <span class="badge bg-danger">Hết hạn</span>
+                    }
+                    else if (item.Status == "ExpiringSoon")
+                    {
+                        <span class="badge bg-warning text-dark">Sắp hết hạn</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">Còn hiệu lực</span>
+                    }
+                </td>
+
+                <td>
+                    <a href="/Admin/Extend/@item.Id" class="btn btn-sm btn-info me-2">Gia hạn</a>
+
+                    <form action="/Admin/ChangePlan" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <select name="newPlanId" class="form-select form-select-sm d-inline w-auto">
+                            <option disabled selected>Chọn gói</option>
+                            <option value="1">Gói 1 tháng</option>
+                            <option value="2">Gói 3 tháng</option>
+                            <option value="3">Gói 12 tháng</option>
+                        </select>
+                        <button class="btn btn-sm btn-warning">Đổi</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

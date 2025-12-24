@@ -1,0 +1,41 @@
+﻿@model List<WebApp.Models.MembershipPlanViewModel>
+
+@{
+    ViewData["Title"] = "Quản lý gói tập";
+}
+
+<h2 class="mb-4 text-center">📦 Quản lý gói tập</h2>
+
+<a href="/Admin/CreatePlan" class="btn btn-primary mb-3">+ Thêm gói tập</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tên gói</th>
+            <th>Thời hạn (tháng)</th>
+            <th>Giá (VND)</th>
+            <th>Mô tả</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.PlanName</td>
+                <td>@p.DurationMonths</td>
+                <td>@p.Price.ToString("N0") đ</td>
+                <td>@p.Description</td>
+                <td>
+                    <a href="/Admin/EditPlan/@p.Id" class="btn btn-warning btn-sm">Sửa</a>
+                    <a href="/Admin/DeletePlan/@p.Id"
+                       onclick="return confirm('Bạn có chắc muốn xóa gói tập này?')"
+                       class="btn btn-danger btn-sm">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

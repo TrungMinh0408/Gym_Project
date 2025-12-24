@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApp.Models.EquipmentViewModel>
+@{
+    ViewData["Title"] = "Quản lý Thiết bị";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3 text-center">🛠 Quản lý thiết bị</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <div class="d-flex justify-content-between mb-3">
+        <h4 class="mb-0">📋 Danh sách thiết bị</h4>
+        <a href="@Url.Action("CreateEquipment", "Admin")" class="btn btn-primary">+ Thêm thiết bị</a>
+    </div>
+
+    <table class="table table-bordered text-center align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Tên thiết bị</th>
+                <th>Số lượng</th>
+                <th>Tình trạng</th>
+                <th>Phòng</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var e in Model)
+                {
+                    <tr>
+                        <td>@e.Id</td>
+                        <td>@e.EquipmentName</td>
+                        <td>@e.Quantity</td>
+                        <td>@(string.IsNullOrEmpty(e.ConditionStatus) ? "Good" : e.ConditionStatus)</td>
+                        <td>@(string.IsNullOrEmpty(e.RoomName) ? "Chưa gán phòng" : e.RoomName)</td>
+                        <td>
+                            <a href="@Url.Action("EditEquipment", "Admin", new { id = e.Id })"
+                               class="btn btn-sm btn-warning me-2">Sửa</a>
+                            <a href="@Url.Action("DeleteEquipment", "Admin", new { id = e.Id })"
+                               onclick="return confirm('Bạn có chắc muốn xóa thiết bị này không?');"
+                               class="btn btn-sm btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="6">Chưa có thiết bị nào.</td></tr>
+            }
+        </tbody>
+    </table>
+</div>

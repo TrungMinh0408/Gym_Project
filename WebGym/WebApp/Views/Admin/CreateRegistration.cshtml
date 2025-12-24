@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Tạo đăng ký gói tập";
+}
+
+<h2>📝 Đăng ký gói tập cho học viên</h2>
+
+<form method="post">
+    <label>Học viên</label>
+    <select name="UserId" class="form-control mb-3">
+        @foreach (var u in ViewBag.Users)
+        {
+            <option value="@u.Id">@u.Name</option>
+        }
+    </select>
+
+    <label>Gói tập</label>
+    <select name="PlanId" class="form-control mb-3">
+        @foreach (var p in ViewBag.Plans)
+        {
+            <option value="@p.Id">@p.PlanName (@p.DurationMonths tháng)</option>
+        }
+    </select>
+
+    <button class="btn btn-success">Tạo đăng ký</button>
+</form>

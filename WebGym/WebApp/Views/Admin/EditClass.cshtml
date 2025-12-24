@@ -1,0 +1,63 @@
+﻿@model WebApp.Models.ClassViewModel
+
+@{
+    ViewData["Title"] = "Sửa lớp học";
+
+    // Lấy danh sách phòng & PT từ ViewBag (đã được nạp ở AdminController.EditClass GET)
+    var rooms = ViewBag.Rooms as List<WebApp.Models.RoomStatistics>
+                ?? new List<WebApp.Models.RoomStatistics>();
+
+    var pts = ViewBag.PTs as List<WebApp.Models.PTStatistics>
+              ?? new List<WebApp.Models.PTStatistics>();
+}
+
+<h2 class="mb-4">✏ Sửa lớp học</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<form asp-action="EditClass" method="post">
+    <!-- ID ẩn để biết đang sửa lớp nào -->
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label class="form-label">Tên lớp</label>
+        <input asp-for="ClassName" class="form-control" required />
+        <span asp-validation-for="ClassName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Huấn luyện viên (PT)</label>
+        <select asp-for="PTUserId" class="form-select">
+            <option value="">-- Chọn PT --</option>
+            @foreach (var pt in pts)
+            {
+                <option value="@pt.UserId">@pt.Name (@pt.Email)</option>
+            }
+        </select>
+        <span asp-validation-for="PTUserId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Phòng tập</label>
+        <select asp-for="RoomId" class="form-select">
+            <option value="">-- Chọn phòng --</option>
+            @foreach (var r in rooms)
+            {
+                <option value="@r.Id">@r.RoomName</option>
+            }
+        </select>
+        <span asp-validation-for="RoomId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Số lượng học viên tối đa</label>
+        <input asp-for="MaxParticipants" type="number" min="1" class="form-control" required />
+        <span asp-validation-for="MaxParticipants" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">💾 Lưu thay đổi</button>
+    <a asp-action="ClassList" class="btn btn-secondary ms-2">⬅ Quay lại</a>
+</form>

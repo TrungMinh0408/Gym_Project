@@ -1,0 +1,25 @@
+﻿@model WebApp.Models.PTStatistics
+@{
+    var trainers = ViewBag.Trainers as List<WebApp.Models.User> ?? new List<WebApp.Models.User>();
+}
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+<h2 class="mt-3 mb-4 text-center">➕ Thêm PT mới</h2>
+<form method="post">
+    <label>Tài khoản</label>
+    <select asp-for="UserId" class="form-select" required>
+        <option value="">-- Chọn user --</option>
+        @foreach (var u in trainers)
+        {
+            <option value="@u.Id">@u.Name (@u.Email)</option>
+        }
+    </select>
+
+    <input asp-for="Specialty" class="form-control mt-2" placeholder="Chuyên môn" />
+    <input asp-for="ExperienceYears" type="number" min="0" class="form-control mt-2" />
+
+    <button type="submit" class="btn btn-success mt-3">Lưu</button>
+    <a href="/Admin/PTStatistics" class="btn btn-secondary mt-3">Quay lại</a>
+</form>

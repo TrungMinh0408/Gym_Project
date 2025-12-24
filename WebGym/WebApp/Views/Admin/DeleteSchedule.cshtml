@@ -1,0 +1,30 @@
+﻿@model WebApp.Models.Schedule
+
+@{
+    ViewData["Title"] = "Xóa lịch học";
+}
+
+<h2>Xóa lịch học</h2>
+
+<h4>Bạn có chắc muốn xóa lịch này?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">Id</dt>
+    <dd class="col-sm-10">@Model.Id</dd>
+
+    <dt class="col-sm-2">ClassId</dt>
+    <dd class="col-sm-10">@Model.ClassId</dd>
+
+    <dt class="col-sm-2">Giờ bắt đầu</dt>
+    <dd class="col-sm-10">@Model.StartTime.ToString("dd/MM/yyyy HH:mm")</dd>
+
+    <dt class="col-sm-2">Giờ kết thúc</dt>
+    <dd class="col-sm-10">@Model.EndTime.ToString("dd/MM/yyyy HH:mm")</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

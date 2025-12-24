@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebApp.Models.MembershipPlanViewModel>
+
+<h2 class="text-center mt-3 mb-4">📦 Quản lý gói Membership</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<div class="mb-3 text-end">
+    <a class="btn btn-success" href="/Admin/CreateMembershipPlan">➕ Thêm gói mới</a>
+</div>
+
+<table class="table table-bordered table-hover text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Tên gói</th>
+            <th>Thời hạn (tháng)</th>
+            <th>Giá</th>
+            <th>Mô tả</th>
+            <th>Ngày tạo</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            var index = 1;
+            foreach (var p in Model)
+            {
+                <tr>
+                    <td>@index</td>
+                    <td>@p.PlanName</td>
+                    <td>@p.DurationMonths</td>
+                    <td>@p.Price.ToString("N0") đ</td>
+                    <td>@p.Description</td>
+                    <td>@(p.CreatedAt?.ToString("dd/MM/yyyy HH:mm") ?? "")</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" href="/Admin/EditMembershipPlan/@p.Id">Sửa</a>
+                        <form asp-action="DeleteMembershipPlan" asp-controller="Admin" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@p.Id" />
+                            <button class="btn btn-sm btn-danger" onclick="deletePlan(@p.Id)">Xóa</button>
+
+                        </form>
+
+                    </td>
+                </tr>
+                index++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7">Chưa có gói membership nào.</td>
+            </tr>
+        }
+    </tbody>
+</table>

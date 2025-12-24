@@ -1,0 +1,36 @@
+﻿@model WebApp.Models.ClassViewModel
+@{
+    var rooms = ViewBag.Rooms as List<RoomStatistics>;
+    var pts = ViewBag.PTs as List<PTStatistics>;
+}
+
+<h2>➕ Thêm lớp học</h2>
+
+<form method="post">
+    <label>Tên lớp</label>
+    <input asp-for="ClassName" required class="form-control" />
+
+    <label>Huấn luyện viên</label>
+    <select asp-for="PTUserId" class="form-select">
+        <option value="">-- Chọn PT --</option>
+        @foreach (var pt in pts)
+        {
+            <option value="@pt.UserId">@pt.Name</option>
+        }
+    </select>
+
+    <label>Phòng</label>
+    <select asp-for="RoomId" class="form-select">
+        <option value="">-- Chọn phòng --</option>
+        @foreach (var r in rooms)
+        {
+            <option value="@r.Id">@r.RoomName</option>
+        }
+    </select>
+
+    <label>Sức chứa</label>
+    <input asp-for="MaxParticipants" type="number" min="1" class="form-control" required />
+
+    <button class="btn btn-success mt-3">Lưu</button>
+    <a href="/Admin/ScheduleCalendar" class="btn btn-secondary mt-3">Quay lại</a>
+</form>

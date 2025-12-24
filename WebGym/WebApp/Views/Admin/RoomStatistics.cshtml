@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebApp.Models.RoomStatistics>
+
+<h2 class="text-center mt-3 mb-4">🏠 Thống kê phòng tập</h2>
+<div class="mb-3 text-end">
+    <a asp-action="CreateRoom" class="btn btn-success">
+        ➕ Thêm phòng tập
+    </a>
+</div>
+
+<table class="table table-bordered table-hover text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Tên phòng</th>
+            <th>Trạng thái</th>
+            <th>Sức chứa</th>
+            <th>Hành động</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            var index = 1;
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@index</td>
+                    <td>@item.RoomName</td>
+                    <td>
+                        @if (item.Status == "Available")
+                        {
+                            <span class="badge bg-success">Available</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">@item.Status</span>
+                        }
+                    </td>
+
+                    <td>@item.Capacity người</td>
+                    <td>
+                        <a asp-action="EditRoom"
+                           asp-route-id="@item.Id"
+                           class="btn btn-sm btn-primary me-1">
+                             Sửa
+                        </a>
+
+                        <form asp-controller="Admin"
+                              asp-action="DeleteRoom"
+                              asp-route-id="@item.Id"
+                              method="post"
+                              class="d-inline"
+                              onsubmit="return confirm('Bạn có chắc muốn xóa phòng này?');">
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                Xóa
+                            </button>
+                        </form>
+                    </td>
+
+                </tr>
+                index++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">Không có dữ liệu phòng tập</td>
+            </tr>
+        }
+    </tbody>
+</table>

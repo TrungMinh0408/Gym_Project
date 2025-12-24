@@ -1,0 +1,16 @@
+﻿@model WebApp.Models.PTStatistics
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <p>🧍 <strong>@Model.Name (@Model.Email)</strong></p>
+
+    <label>Chuyên môn</label>
+    <input asp-for="Specialty" class="form-control" />
+
+    <label class="mt-2">Kinh nghiệm</label>
+    <input asp-for="ExperienceYears" type="number" min="0" class="form-control" />
+
+    <button type="submit" class="btn btn-primary mt-3">Cập nhật</button>
+    <a href="/Admin/PTStatistics" class="btn btn-secondary mt-3">Quay lại</a>
+</form>

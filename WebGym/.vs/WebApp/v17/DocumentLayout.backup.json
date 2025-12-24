@@ -1,0 +1,233 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\views\\admin\\createclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\admin\\createclass.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\views\\admin\\membershipplans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\admin\\membershipplans.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\models\\membershipplanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\membershipplanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|c:\\users\\admin\\source\\repos\\webapp\\webapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE0D2C9-6BE9-45AC-B04D-24C70FC60E60}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3fd5e0cc-709a-4f8c-94c3-7f0f8dff5bb2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "WebApp\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "WebApp\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAADYCAAAAAAAAAAAowEUCAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T08:43:20.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MembershipPlans.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Admin\\MembershipPlans.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Admin\\MembershipPlans.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Admin\\MembershipPlans.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Admin\\MembershipPlans.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T10:28:20.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MembershipPlanViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Models\\MembershipPlanViewModel.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\MembershipPlanViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Models\\MembershipPlanViewModel.cs",
+              "RelativeToolTip": "WebApp\\Models\\MembershipPlanViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T10:41:11.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateClass.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Admin\\CreateClass.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Admin\\CreateClass.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Admin\\CreateClass.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Admin\\CreateClass.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T08:42:39.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T08:40:14.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T08:36:34.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T08:34:17.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Program.cs",
+              "RelativeToolTip": "WebApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T08:33:30.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "WebApp\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T08:26:30.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\WebApp\\WebApp\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-15T08:26:20.868Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

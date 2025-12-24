@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebApp.Models.PTStatistics>
+
+<h2 class="text-center mt-3 mb-4">📋 Danh sách Huấn luyện viên</h2>
+
+<a href="/Admin/CreatePT" class="btn btn-success mb-3">➕ Thêm PT</a>
+
+<table class="table table-bordered text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tài khoản</th>
+            <th>Chuyên môn</th>
+            <th>Kinh nghiệm</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pt in Model)
+        {
+            <tr>
+                <td>@pt.Id</td>
+                <td>@pt.Name (@pt.Email)</td>
+                <td>@pt.Specialty</td>
+                <td>@pt.ExperienceYears năm</td>
+                <td>
+                    <a href="/Admin/EditPT/@pt.Id" class="btn btn-primary btn-sm">✏ Sửa</a>
+                    <a href="/Admin/DeletePT/@pt.Id" class="btn btn-danger btn-sm"
+                       onclick="return confirm('Xóa PT này?')">🗑 Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

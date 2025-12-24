@@ -1,0 +1,101 @@
+﻿@model IEnumerable<WebApp.Models.User>
+@{
+    ViewData["Title"] = "Thống kê người dùng";
+    var stats = ViewBag.Statistics as WebApp.Models.UserStatistics;
+}
+
+<div class="container mt-5">
+    <!-- 🔽 Dropdown chọn loại thống kê -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <select id="statType" name="statType" onchange="onStatTypeChange()" class="form-select" style="width: 300px; margin: 0 auto;">
+            <option value="">-- Chọn loại thống kê --</option>
+            <option value="user" selected>Người dùng</option>
+            <option value="pt">Huấn luyện viên</option>
+            <option value="room">Phòng tập</option>
+        </select>
+    </div>
+
+    <h2 class="text-center mb-4">📊 Thống kê người dùng</h2>
+
+    <div class="row text-center mb-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white shadow-sm">
+                <div class="card-body">
+                    <h5>Tổng người dùng</h5>
+                    <h2>@stats.TotalUsers</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white shadow-sm">
+                <div class="card-body">
+                    <h5>Admin</h5>
+                    <h2>@stats.Admins</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning text-dark shadow-sm">
+                <div class="card-body">
+                    <h5>Trainer</h5>
+                    <h2>@stats.Trainers</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white shadow-sm">
+                <div class="card-body">
+                    <h5>Khách hàng</h5>
+                    <h2>@stats.Customers</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-4 mb-3">👥 Danh sách người dùng</h3>
+    <a href="@Url.Action("Create", "Admin")" class="btn btn-primary mb-3">+ Thêm người dùng</a>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Ngày tạo</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.Role</td>
+                    <td>@user.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        <a href="@Url.Action("Detail", "Admin", new { id = user.Id })" class="btn btn-sm btn-info">Xem</a>
+                        <a href="@Url.Action("Edit", "Admin", new { id = user.Id })" class="btn btn-sm btn-warning">Sửa</a>
+                        <a href="@Url.Action("Delete", "Admin", new { id = user.Id })" class="btn btn-sm btn-danger"
+                           onclick="return confirm('Bạn có chắc muốn xóa người dùng này?')">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<!-- 🔁 Script điều hướng khi chọn dropdown -->
+<script>
+    function onStatTypeChange() {
+        const value = document.getElementById("statType").value;
+        if (value === "pt") {
+            window.location.href = "/Admin/PTStatistics";
+        } else if (value === "user") {
+            window.location.href = "/Admin/Statistics";
+        } else if (value === "room") {
+            window.location.href = "/Admin/RoomStatistics";
+        }
+    }
+</script>

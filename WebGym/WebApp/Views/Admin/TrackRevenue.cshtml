@@ -1,0 +1,53 @@
+﻿@model WebApp.Models.RevenueViewModel
+
+<h2 class="text-center mt-3 mb-4">💰 Theo dõi doanh thu</h2>
+
+<form method="get" class="row mb-4">
+    <div class="col">
+        <label>Từ ngày</label>
+        <input type="date" name="from" class="form-control" value="@ViewBag.From" />
+    </div>
+    <div class="col">
+        <label>Đến ngày</label>
+        <input type="date" name="to" class="form-control" value="@ViewBag.To" />
+    </div>
+    <div class="col-auto align-self-end">
+        <button type="submit" class="btn btn-primary">Lọc</button>
+    </div>
+</form>
+
+<div class="row text-center mb-4">
+    <div class="col-md-3 card p-3 shadow">
+        <h6>Tổng doanh thu</h6>
+        <h4>@Model.TotalRevenue.ToString("N0") đ</h4>
+    </div>
+    <div class="col-md-3 card p-3 shadow">
+        <h6>Hôm nay</h6>
+        <h4>@Model.RevenueToday.ToString("N0") đ</h4>
+    </div>
+    <div class="col-md-3 card p-3 shadow">
+        <h6>Tháng này</h6>
+        <h4>@Model.RevenueThisMonth.ToString("N0") đ</h4>
+    </div>
+</div>
+
+<h4>📅 Doanh thu theo ngày</h4>
+<table class="table table-bordered text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>Ngày</th>
+            <th>Số giao dịch</th>
+            <th>Doanh thu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model.DailyRevenues)
+        {
+            <tr>
+                <td>@d.Date.ToString("dd/MM/yyyy")</td>
+                <td>@d.Count</td>
+                <td>@d.Amount.ToString("N0") đ</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@model WebApp.Models.Schedule
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Thêm lịch học";
+}
+
+<h2>Thêm lịch học</h2>
+
+<form asp-action="CreateSchedule" method="post">
+
+    <!-- USER -->
+    <div class="mb-3">
+        <label>User</label>
+        <select name="userId" class="form-select" required>
+            <option value="">-- Chọn user --</option>
+            @foreach (var u in ViewBag.Users as List<SelectListItem>)
+            {
+                <option value="@u.Value">@u.Text</option>
+            }
+        </select>
+    </div>
+
+    <!-- CLASS -->
+    <div class="mb-3">
+        <label>Class</label>
+        <select asp-for="ClassId" class="form-select">
+            @foreach (var c in ViewBag.Classes as List<SelectListItem>)
+            {
+                <option value="@c.Value">@c.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="StartTime"></label>
+        <input asp-for="StartTime" type="datetime-local" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="EndTime"></label>
+        <input asp-for="EndTime" type="datetime-local" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary">Lưu</button>
+</form>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

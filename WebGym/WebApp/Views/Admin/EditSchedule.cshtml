@@ -1,0 +1,45 @@
+﻿@model WebApp.Models.Schedule
+
+@{
+    ViewData["Title"] = "Sửa lịch học";
+}
+
+<h2>Sửa lịch học</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Id" class="form-label"></label>
+        <input asp-for="Id" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ClassId" class="form-label"></label>
+        <input asp-for="ClassId" class="form-control" />
+        <span asp-validation-for="ClassId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="StartTime" class="form-label"></label>
+        <input asp-for="StartTime" class="form-control" type="datetime-local" />
+        <span asp-validation-for="StartTime" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="EndTime" class="form-label"></label>
+        <input asp-for="EndTime" class="form-control" type="datetime-local" />
+        <span asp-validation-for="EndTime" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a asp-controller="Admin"
+       asp-action="Schedules"
+       class="btn btn-secondary">
+        Quay lại
+    </a>
+</form>
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

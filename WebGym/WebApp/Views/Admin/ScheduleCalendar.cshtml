@@ -1,0 +1,109 @@
+﻿@model WebApp.Models.ScheduleCalendarViewModel
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@{
+    ViewData["Title"] = "Lịch tuần";
+}
+
+<h2 class="text-center mb-4">Lịch tuần</h2>
+<div class="mb-3 text-end">
+    <a asp-action="CreateSchedule" class="btn btn-success">
+        ➕ Thêm lịch tập
+    </a>
+</div>
+<form asp-action="ScheduleCalendar" method="get" class="mb-4 text-center">
+    <label for="UserId" class="me-2">Chọn User:</label>
+    @Html.DropDownListFor(
+            m => m.UserId,
+            Model.Users,
+            "-- Chọn User --",
+            new { @class = "form-select d-inline-block w-auto me-3", onchange = "this.form.submit()" }
+            )
+
+    <label for="WeekStart" class="me-2">Tuần bắt đầu từ:</label>
+    <input type="date" id="WeekStart" name="weekStart" class="form-control d-inline-block w-auto me-3"
+           value="@Model.WeekStart.ToString("yyyy-MM-dd")" />
+
+    <button type="submit" class="btn btn-primary">Xem</button>
+</form>
+
+
+@{
+    var weekDays = Enumerable.Range(0, 7).Select(i => Model.WeekStart.AddDays(i)).ToList();
+
+    var timeSlots = new List<(TimeSpan Start, TimeSpan End)>
+    {
+        (TimeSpan.FromHours(6), TimeSpan.FromHours(10)),
+        (TimeSpan.FromHours(12), TimeSpan.FromHours(16)),
+        (TimeSpan.FromHours(18), TimeSpan.FromHours(21))
+    };
+}
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Ca / Ngày</th>
+            @foreach (var day in weekDays)
+            {
+                <th>@day.ToString("dddd-dd/MM")</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @for (int slotIndex = 0; slotIndex < timeSlots.Count; slotIndex++)
+        {
+            var slot = timeSlots[slotIndex];
+            <tr>
+                <td>
+                    @($"{slot.Start:hh\\:mm} - {slot.End:hh\\:mm}")
+                </td>
+
+                @foreach (var day in weekDays)
+                {
+                    var schedulesInCell = Model.Schedules
+                    .Where(s =>
+                    s.StartTime.Date == day.Date &&
+                    s.StartTime.TimeOfDay <= slot.End &&
+                    s.EndTime.TimeOfDay >= slot.Start)
+                    .ToList();
+
+                    <td style="min-width:150px;">
+                        @if (schedulesInCell.Any())
+                        {
+                            foreach (var s in schedulesInCell)
+                            {
+                                <div class="border p-2 mb-1 rounded bg-light position-relative">
+
+                                    <form asp-action="DeleteSchedule"
+                                          method="post"
+                                          class="position-absolute top-0 end-0 m-1"
+                                          onsubmit="return confirm('Xóa lịch này?');">
+
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@s.UserScheduleId" />
+
+                                        <button type="submit"
+                                                class="btn btn-sm btn-danger p-1"
+                                                title="Xóa lịch">
+                                            🗑
+                                        </button>
+                                    </form>
+
+                                    <strong>@s.ClassName</strong><br />
+                                    <span>@s.PTName</span><br />
+                                    <small>@s.RoomName</small>
+                                </div>
+
+
+                            }
+                        }
+                        else
+                        {
+                            <span class="text-muted">—</span>
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

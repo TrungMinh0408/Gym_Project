@@ -1,0 +1,69 @@
+﻿@model WebApp.Models.TransactionListViewModel
+
+<h2 class="text-center mt-3 mb-4">💳 Danh sách giao dịch</h2>
+
+<form method="get" class="row mb-4">
+    <div class="col-md-3">
+        <label>Từ ngày</label>
+        <input type="date" name="from" class="form-control" value="@ViewBag.From" />
+    </div>
+    <div class="col-md-3">
+        <label>Đến ngày</label>
+        <input type="date" name="to" class="form-control" value="@ViewBag.To" />
+    </div>
+    <div class="col-auto align-self-end">
+        <button type="submit" class="btn btn-primary mt-2">Lọc</button>
+    </div>
+</form>
+
+
+<div class="row text-center mb-4">
+    <div class="col-md-3 card p-3 shadow me-3">
+        <h6>Tổng số giao dịch</h6>
+        <h4>@Model.TotalCount</h4>
+    </div>
+    <div class="col-md-3 card p-3 shadow">
+        <h6>Tổng số tiền</h6>
+        <h4>@Model.TotalAmount.ToString("N0") đ</h4>
+    </div>
+</div>
+
+<h4>📋 Chi tiết giao dịch</h4>
+<table class="table table-bordered table-hover text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Người dùng</th>
+            <th>Gói tập</th>
+            <th>Số tiền</th>
+            <th>Loại</th>
+            <th>Ngày thanh toán</th>
+            <th>Thời gian tạo GD</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Items != null && Model.Items.Any())
+        {
+            var index = 1;
+            foreach (var t in Model.Items)
+            {
+                <tr>
+                    <td>@index</td>
+                    <td>@t.UserName</td>
+                    <td>@t.PlanName</td>
+                    <td>@t.Amount.ToString("N0") đ</td>
+                    <td>@t.TransactionType</td>
+                    <td>@t.PaymentDate.ToString("dd/MM/yyyy")</td>
+                    <td>@t.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+                index++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7">Không có giao dịch nào trong khoảng thời gian này.</td>
+            </tr>
+        }
+    </tbody>
+</table>
